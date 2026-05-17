@@ -12,9 +12,9 @@ from urllib.parse import quote, urljoin
 import requests
 from bs4 import BeautifulSoup
 
-import config
-from database import db
-from qq_music import get_lyrics_by_song, search_song
+from anime_lyrics_publisher import config
+from anime_lyrics_publisher.database import db
+from .qq_music import get_lyrics_by_song, search_song
 
 # 配置日志
 logging.basicConfig(level=getattr(logging, config.LOG_LEVEL))

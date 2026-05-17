@@ -10,11 +10,11 @@ from apscheduler.schedulers.blocking import BlockingScheduler
 from apscheduler.triggers.cron import CronTrigger
 from apscheduler.triggers.interval import IntervalTrigger
 
-import config
-from anime_lyrics_spider import crawl_weekly_lyrics
-from article_generator import generate_daily_article
-from wechat_publisher import generate_and_publish_article
-from database import db
+from . import config
+from spiders.anime_lyrics_spider import crawl_weekly_lyrics
+from generator.article_generator import generate_daily_article
+from publisher.wechat_publisher import generate_and_publish_article
+from .database import db
 
 # 配置日志
 logging.basicConfig(

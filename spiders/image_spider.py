@@ -30,8 +30,8 @@ from urllib.parse import quote
 import requests
 from PIL import Image
 
-import config
-import database
+from anime_lyrics_publisher import config
+from anime_lyrics_publisher import database
 
 
 # ─────────────────────────────────────────────

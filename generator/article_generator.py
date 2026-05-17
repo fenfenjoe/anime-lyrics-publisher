@@ -16,8 +16,8 @@ import time
 from typing import List, Dict, Optional
 from datetime import datetime
 
-import config
-from database import db
+from anime_lyrics_publisher import config
+from anime_lyrics_publisher.database import db
 
 logging.basicConfig(level=getattr(logging, config.LOG_LEVEL))
 logger = logging.getLogger(__name__)

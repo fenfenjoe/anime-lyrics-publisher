@@ -14,8 +14,8 @@ import requests
 import urllib3
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-import config
-from database import db
+from anime_lyrics_publisher import config
+from anime_lyrics_publisher.database import db
 
 # 配置日志
 logging.basicConfig(level=getattr(logging, config.LOG_LEVEL))
@@ -328,7 +328,7 @@ def generate_and_publish_article() -> bool:
     logger.info("=== 开始生成并发布文章 ===")
     
     # 1. 生成文章
-    from article_generator import generate_daily_article
+    from generator.article_generator import generate_daily_article
     article = generate_daily_article()
     
     if not article:
@@ -336,7 +336,7 @@ def generate_and_publish_article() -> bool:
         return False
     
     # 2. 爬取配图
-    from image_spider import crawl_images_for_article
+    from spiders.image_spider import crawl_images_for_article
     
     lyrics_data = article.get('lyrics_data', {})
     anime_name = lyrics_data.get('anime_name', '')

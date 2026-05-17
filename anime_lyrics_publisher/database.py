@@ -9,7 +9,7 @@ from datetime import datetime
 from typing import Optional, List, Dict, Any
 from contextlib import contextmanager
 
-import config
+from . import config
 
 # 配置日志
 logging.basicConfig(level=getattr(logging, config.LOG_LEVEL))

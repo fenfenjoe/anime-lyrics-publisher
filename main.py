@@ -11,12 +11,12 @@ import logging
 # 添加项目根目录到 Python 路径
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
-import config
-from database import db
-from anime_lyrics_spider import crawl_weekly_lyrics
-from article_generator import generate_daily_article
-from wechat_publisher import generate_and_publish_article
-from scheduler import start_scheduler, run_weekly_crawl_now, run_daily_publish_now
+from anime_lyrics_publisher import config
+from anime_lyrics_publisher.database import db
+from spiders.anime_lyrics_spider import crawl_weekly_lyrics
+from generator.article_generator import generate_daily_article
+from publisher.wechat_publisher import generate_and_publish_article
+from anime_lyrics_publisher.scheduler import start_scheduler, run_weekly_crawl_now, run_daily_publish_now
 
 # 配置日志
 logging.basicConfig(
