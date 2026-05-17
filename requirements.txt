@@ -1,0 +1,32 @@
+# 微信公众号动漫歌词日语学习文章生成器 - 依赖列表
+
+# 核心依赖
+python-dotenv>=1.0.0          # 环境变量管理
+apscheduler>=3.10.0            # 定时任务调度
+
+# 数据库
+# SQLite 无需额外安装（Python 内置）
+
+# HTTP 请求
+requests>=2.31.0               # HTTP 请求库
+urllib3>=2.0.0                 # HTTP 客户端
+
+# 微信公众号 API
+wechatpy>=1.8.0                # 微信公众号 Python SDK
+
+# 图片处理
+pillow>=10.0.0                 # Python 图像处理库
+
+# 浏览器自动化（用于图片爬取）
+playwright>=1.40.0             # 浏览器自动化框架
+
+# 文本处理
+beautifulsoup4>=4.12.0         # HTML 解析
+lxml>=4.9.0                    # XML/HTML 解析器
+
+# 日志
+colorlog>=6.8.0                # 彩色日志输出
+
+# LLM 提供商（至少选择一个）
+openai>=1.0.0                  # OpenAI GPT
+anthropic>=0.18.0              # Anthropic Claude

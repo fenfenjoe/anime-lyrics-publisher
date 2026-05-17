@@ -1,0 +1,58 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual Environment
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data directory (contains large image files and database)
+data/
+
+# Workbuddy internal files
+.workbuddy/
+.codebuddy/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+analysis_result*.json
+analysis_temp.json
+ai_result*.json
+ai_result*.py
+check_result*.txt
+duplicate_cleanup_plan.txt
+*_out.txt

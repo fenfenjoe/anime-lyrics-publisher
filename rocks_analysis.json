@@ -1,0 +1,335 @@
+{
+  "song_intro": "《R★O★C★K★S》是HOUND DOG演唱的火影忍者第三版OP，那种燃爆的摇滚节奏一响起来，整个人都热血沸腾！歌词里写的是不断追逐、跌倒再爬起的坚持感，完全就是鸣人的人生写照嘛！每次听都感觉被推着往前冲，真的是让人不自觉握紧拳头的名曲！",
+  "result": [
+    {
+      "original": "Come on",
+      "furigana": "Come on",
+      "translation": "来吧",
+      "grammar": "英语感叹词，在日语歌词中作为号召、鼓励语气使用。"
+    },
+    {
+      "original": "追われるように 急いでいる",
+      "furigana": "追（お）われるように 急（いそ）いでいる",
+      "translation": "像是被什么追赶着，不停地催促自己赶路",
+      "grammar": "①追われる是追う的被动形；②～ように表示比喻；③急いでいる是急ぐのて形＋いる，表示持续状态。"
+    },
+    {
+      "original": "乾いた胸が",
+      "furigana": "乾（かわ）いた胸（むね）が",
+      "translation": "干涸的内心",
+      "grammar": "①乾いた是乾く的た形作定语；②が是主格助词，提示主语。"
+    },
+    {
+      "original": "かりたてるのさ",
+      "furigana": "かりたてるのさ",
+      "translation": "不断驱使着我",
+      "grammar": "①かりたてる意为驱使、催促；②のさ是男性口语语气词，带有感叹和确认语气。"
+    },
+    {
+      "original": "ひときわ強く",
+      "furigana": "ひときわ強（つよ）く",
+      "translation": "格外有力地",
+      "grammar": "①ひときわ是副词，意为格外、特别；②強く是形容词強いのく形，作副词修饰动词。"
+    },
+    {
+      "original": "輝く星は",
+      "furigana": "輝（かがや）く星（ほし）は",
+      "translation": "那颗耀眼的星星",
+      "grammar": "①輝く是动词，作定语修饰星；②は是话题助词，将该星提为话题。"
+    },
+    {
+      "original": "いまも遠くにある",
+      "furigana": "いまも遠（とお）くにある",
+      "translation": "如今依然在遥远的地方",
+      "grammar": "①いまも中も是副助词表依然；②遠くに中に是存在位置助词；③ある是无生命事物的存在动词。"
+    },
+    {
+      "original": "失ってゆく",
+      "furigana": "失（うしな）ってゆく",
+      "translation": "不断失去着",
+      "grammar": "①失って是失うのて形；②～てゆく表示动作随时间持续变化，渐渐失去。"
+    },
+    {
+      "original": "求めながら",
+      "furigana": "求（もと）めながら",
+      "translation": "一边渴求着",
+      "grammar": "①求め是求めるのます形（连用形）；②～ながら接连用形，表示两动作同时进行。"
+    },
+    {
+      "original": "奪われてゆく",
+      "furigana": "奪（うば）われてゆく",
+      "translation": "不断被夺走",
+      "grammar": "①奪われる是奪うの被动形，被夺走；②～てゆく表示动作持续进行。"
+    },
+    {
+      "original": "与えながら",
+      "furigana": "与（あた）えながら",
+      "translation": "一边给予着",
+      "grammar": "与え是与えるの连用形，～ながら与奪われてゆく并列形成对比，一边被夺走一边给予。"
+    },
+    {
+      "original": "誰のためでもなく",
+      "furigana": "誰（だれ）のためでもなく",
+      "translation": "不是为了任何人",
+      "grammar": "①誰のため意为为了某人；②でもなく是でもない的连用中顿，表示双重否定。"
+    },
+    {
+      "original": "誰のものでなく",
+      "furigana": "誰（だれ）のものでなく",
+      "translation": "不属于任何人",
+      "grammar": "①誰のもの意为某人的所有物；②でなく是ではない的连用中顿表否定并承接。"
+    },
+    {
+      "original": "俺たちのいまが",
+      "furigana": "俺（おれ）たちのいまが",
+      "translation": "我们此刻的存在",
+      "grammar": "①俺たち是第一人称复数我们；②のは所属格助词；③が是主格助词，强调主语。"
+    },
+    {
+      "original": "思いかさね",
+      "furigana": "思（おも）いかさね",
+      "translation": "将心意层层叠加",
+      "grammar": "①思い是思うの名词化连用形；②かさね是重ねるの连用形中顿，与下两句构成排比。"
+    },
+    {
+      "original": "夢をかさね",
+      "furigana": "夢（ゆめ）をかさね",
+      "translation": "将梦想层层叠加",
+      "grammar": "①夢をのを是宾格助词；②かさね是重ねるの连用形，排比继续。"
+    },
+    {
+      "original": "日々をかさね",
+      "furigana": "日々（ひび）をかさね",
+      "translation": "将每一天层层叠加",
+      "grammar": "①日々是名词每天；②三句排比（思いかさね/夢をかさね/日々をかさね）表现不断积累的意志。"
+    },
+    {
+      "original": "汗にまみれ",
+      "furigana": "汗（あせ）にまみれ",
+      "translation": "满身汗水",
+      "grammar": "①汗に中に是状态助词；②まみれ是まみれるの连用形，沾满，常用格式～にまみれる。"
+    },
+    {
+      "original": "涙こらえ",
+      "furigana": "涙（なみだ）こらえ",
+      "translation": "忍住眼泪",
+      "grammar": "①涙后省略宾格助词を，歌词常见省略；②こらえ是こらえるの连用形，意为忍住。"
+    },
+    {
+      "original": "血をたぎらせ",
+      "furigana": "血（ち）をたぎらせ",
+      "translation": "让热血沸腾",
+      "grammar": "①血をのを是宾格助词；②たぎらせ是たぎる的使役形连用形，让沸腾。"
+    },
+    {
+      "original": "闘うことも",
+      "furigana": "闘（たたか）うことも",
+      "translation": "战斗这件事也好",
+      "grammar": "①闘う动词原形；②こと形式名词将动词名词化；③も表示并列包含。"
+    },
+    {
+      "original": "愛しあうことも",
+      "furigana": "愛（あい）しあうことも",
+      "translation": "彼此相爱这件事也好",
+      "grammar": "①愛しあう是愛する加あう构成互动动词，互相爱；②ことも与上句并列，两件事都涵盖。"
+    },
+    {
+      "original": "遙か光の",
+      "furigana": "遙（はる）か光（ひかり）の",
+      "translation": "遥远光芒的",
+      "grammar": "①遙か是な形容词，遥远的；②光のの是修饰格助词，修饰后续词（承接下句）。"
+    },
+    {
+      "original": "On the way",
+      "furigana": "On the way",
+      "translation": "在前行的路上",
+      "grammar": "英语短语作副词用，表示在途中、在前行的路上，呼应全曲奔跑追逐的主题。"
+    },
+    {
+      "original": "裏切ってきた",
+      "furigana": "裏切（うらぎ）ってきた",
+      "translation": "曾经背叛过",
+      "grammar": "①裏切る动词背叛；②～てきた表示从过去持续到现在的动作，一直背叛过来，含回顾意味。"
+    },
+    {
+      "original": "信ながら",
+      "furigana": "信（しん）じながら",
+      "translation": "一边信任着",
+      "grammar": "①信じ是信じるの连用形；②～ながら与裏切ってきた形成悖论式对比，一边信任一边背叛。"
+    },
+    {
+      "original": "傷つけてきた",
+      "furigana": "傷（きず）つけてきた",
+      "translation": "曾经伤害过",
+      "grammar": "①傷つける使役动词伤害；②～てきた表示一段时间内反复发生的动作，一直伤害过来。"
+    },
+    {
+      "original": "祈りながら",
+      "furigana": "祈（いの）りながら",
+      "translation": "一边祈祷着",
+      "grammar": "祈り是祈るの连用形，～ながら与傷つけてきた并列，一边伤害一边祈祷，反差深化主题。"
+    },
+    {
+      "original": "誰のことでなく",
+      "furigana": "誰（だれ）のことでなく",
+      "translation": "不关任何人的事",
+      "grammar": "①誰のこと意为关于某人的事；②でなく是ではない连用中顿，否定并承接，与第12句呼应。"
+    },
+    {
+      "original": "誰のせいでなく",
+      "furigana": "誰（だれ）のせいでなく",
+      "translation": "不是任何人的错",
+      "grammar": "①せい意为缘故、过错，常用せいで表示因为；②でなく否定，并非谁的错。"
+    },
+    {
+      "original": "俺たちのいまを",
+      "furigana": "俺（おれ）たちのいまを",
+      "translation": "将我们此刻的时光",
+      "grammar": "①与第14句俺たちのいまが呼应；②が强调主语，を标记宾语，把此刻作为行动对象。"
+    },
+    {
+      "original": "傷みほどき",
+      "furigana": "傷（いた）みほどき",
+      "translation": "解开痛苦的束缚",
+      "grammar": "①傷み是傷むの名词化连用形，痛苦；②ほどき是ほどくの连用形，解开，与下两句构成排比。"
+    },
+    {
+      "original": "心ほどき",
+      "furigana": "心（こころ）ほどき",
+      "translation": "解开心灵的束缚",
+      "grammar": "心后省略助词を，ほどき继续排比，三句排比象征解开一切束缚、轻装前行。"
+    },
+    {
+      "original": "影をほどき",
+      "furigana": "影（かげ）をほどき",
+      "translation": "解开阴影的束缚",
+      "grammar": "①影有阴影、暗面之意；②ほどき连用形，三句排比完整：傷みほどき/心ほどき/影をほどき。"
+    },
+    {
+      "original": "息をつめて",
+      "furigana": "息（いき）をつめて",
+      "translation": "屏住呼吸",
+      "grammar": "①息をつめる是固定搭配，屏住呼吸；②て形表示连续动作，屏住呼吸，然后……"
+    },
+    {
+      "original": "走りぬけろ",
+      "furigana": "走（はし）りぬけろ",
+      "translation": "穿越而过，奔跑到底！",
+      "grammar": "①走り是走るの连用形；②抜ける补助动词穿越、突破；③ろ是命令形，强烈号召：跑过去！"
+    },
+    {
+      "original": "闇を裂いて",
+      "furigana": "闇（やみ）を裂（さ）いて",
+      "translation": "划破黑暗",
+      "grammar": "①闇をのを是宾格助词；②裂いて是裂くのて形，划破、劈开，形象描绘冲破黑暗的意象。"
+    },
+    {
+      "original": "悲しむことも",
+      "furigana": "悲（かな）しむことも",
+      "translation": "悲伤这件事也好",
+      "grammar": "①悲しむ动词悲伤；②ことも将动词名词化并加も表示包含，与下句并列。"
+    },
+    {
+      "original": "夢をみることも",
+      "furigana": "夢（ゆめ）をみることも",
+      "translation": "做梦这件事也好",
+      "grammar": "①夢を見る是固定搭配做梦；②ことも列举并包含，两句合起来：无论悲伤还是做梦……"
+    },
+    {
+      "original": "終わりはしない",
+      "furigana": "終（お）わりはしない",
+      "translation": "都不会终结",
+      "grammar": "①終わり是終わるの名词化；②はしない是强调否定句式，比終わらない语气更强，绝对不会结束。"
+    },
+    {
+      "original": "On the way",
+      "furigana": "On the way",
+      "translation": "在前行的路上",
+      "grammar": "副歌重复的英语短语，强调奔跑前行的主题，形成结构呼应。"
+    },
+    {
+      "original": "思いかさね",
+      "furigana": "思（おも）いかさね",
+      "translation": "将心意层层叠加",
+      "grammar": "副歌重复，思い名词化连用形＋かさね连用形，与第15句相同，呼应强化全曲主题。"
+    },
+    {
+      "original": "夢をかさね",
+      "furigana": "夢（ゆめ）をかさね",
+      "translation": "将梦想层层叠加",
+      "grammar": "副歌重复，を宾格助词＋かさね连用形，排比结构再次出现，加深印象。"
+    },
+    {
+      "original": "日々をかさね",
+      "furigana": "日々（ひび）をかさね",
+      "translation": "将每一天层层叠加",
+      "grammar": "日々名词每天，副歌排比收尾，三句连用形排比强调积累与坚持。"
+    },
+    {
+      "original": "汗にまみれ",
+      "furigana": "汗（あせ）にまみれ",
+      "translation": "满身汗水",
+      "grammar": "に状态助词＋まみれ连用形沾满，副歌重复，强化意境。"
+    },
+    {
+      "original": "涙こらえ",
+      "furigana": "涙（なみだ）こらえ",
+      "translation": "忍住眼泪",
+      "grammar": "省略助词を＋こらえ连用形忍住，副歌重复。"
+    },
+    {
+      "original": "血をたぎらせ",
+      "furigana": "血（ち）をたぎらせ",
+      "translation": "让热血沸腾",
+      "grammar": "を宾格助词＋たぎらせ使役形连用形，副歌重复，热血感达到高潮。"
+    },
+    {
+      "original": "I wanna rocks 胸に rocks",
+      "furigana": "I wanna rocks 胸（むね）に rocks",
+      "translation": "我想要摇滚，心中的摇滚",
+      "grammar": "①英语I wanna rocks嵌入歌词；②胸に中に是位置助词，在心中；③日英混搭是J-Pop常见手法。"
+    },
+    {
+      "original": "I wanna rocks 胸に rocks",
+      "furigana": "I wanna rocks 胸（むね）に rocks",
+      "translation": "我想要摇滚，心中的摇滚",
+      "grammar": "重复句强调情感，歌词重复是音乐中常见的强调手法（リフレイン）。"
+    },
+    {
+      "original": "I wanna rocks",
+      "furigana": "I wanna rocks",
+      "translation": "我想要摇滚",
+      "grammar": "英语短句，连续重复形成强烈节奏感和呐喊感，是摇滚歌曲的标志性写法。"
+    },
+    {
+      "original": "I wanna rocks",
+      "furigana": "I wanna rocks",
+      "translation": "我想要摇滚",
+      "grammar": "歌词反复（繰り返し）用于加强情感冲击，日语中称くりかえし。"
+    },
+    {
+      "original": "I wanna rocks",
+      "furigana": "I wanna rocks",
+      "translation": "我想要摇滚",
+      "grammar": "连续重复强调，摇滚气势通过反复歌词放大，是J-Rock的典型特征。"
+    },
+    {
+      "original": "I wanna rocks",
+      "furigana": "I wanna rocks",
+      "translation": "我想要摇滚",
+      "grammar": "再次重复，情感高峰段落，营造不可阻挡的摇滚气势。"
+    },
+    {
+      "original": "胸にrocks",
+      "furigana": "胸（むね）にrocks",
+      "translation": "心中的摇滚",
+      "grammar": "①胸に中に是位置助词，在心中；②rocks英语名词直接接日语助词，日英混搭歌词写法。"
+    },
+    {
+      "original": "I wanna rocks",
+      "furigana": "I wanna rocks",
+      "translation": "我想要摇滚",
+      "grammar": "全曲终结句，反复的I wanna rocks作为情感终点，摇滚精神在最后一声呐喊中凝固升华。"
+    }
+  ]
+}

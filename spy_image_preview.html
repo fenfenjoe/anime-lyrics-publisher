@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>SPY×FAMILY 图片来源对比</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, sans-serif; background: #f5f5f5; padding: 24px; }
+h1 { text-align: center; color: #333; margin-bottom: 8px; font-size: 20px; }
+.subtitle { text-align: center; color: #888; margin-bottom: 24px; font-size: 13px; }
+.section { margin-bottom: 32px; }
+.section-header {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 14px; padding-bottom: 8px;
+  border-bottom: 2px solid #e0e0e0;
+}
+.badge {
+  font-size: 12px; font-weight: 600; padding: 4px 10px;
+  border-radius: 20px; color: #fff;
+}
+.badge-mal { background: #2ecc71; }
+.badge-bing { background: #e67e22; }
+.section-title { font-size: 16px; color: #333; }
+.section-meta { font-size: 12px; color: #999; margin-left: auto; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px; }
+.card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.card img { width: 100%; height: 200px; object-fit: cover; display: block; }
+.card-info { padding: 10px 12px; }
+.card-name { font-size: 12px; color: #555; font-weight: 500; }
+.card-size { font-size: 11px; color: #aaa; }
+
+.verdict {
+  background: #fff; border-radius: 10px; padding: 20px 24px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-top: 24px;
+}
+.verdict h2 { font-size: 15px; color: #333; margin-bottom: 12px; }
+.verdict-row { display: flex; gap: 16px; margin-bottom: 10px; font-size: 13px; }
+.verdict-label { width: 80px; color: #888; flex-shrink: 0; }
+.verdict-green { color: #27ae60; }
+.verdict-red { color: #e74c3c; }
+.verdict-yellow { color: #f39c12; }
+</style>
+</head>
+<body>
+
+<h1>SPY×FAMILY 图片来源对比测试</h1>
+<p class="subtitle">分别从 MyAnimeList API 和 Bing 图片搜索爬取，对比质量与准确度</p>
+
+<!-- MAL API -->
+<div class="section">
+  <div class="section-header">
+    <span class="badge badge-mal">来源1</span>
+    <span class="section-title">MyAnimeList Jikan API（优先）</span>
+    <span class="section-meta">搜索关键词: SPY×FAMILY，TV版优先，MAL ID=50265</span>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <img src="data/spytest/spy_mal_01.jpg" onerror="this.parentElement.style.display='none'">
+      <div class="card-info"><div class="card-name">spy_mal_01.jpg（封面 Large）</div><div class="card-size" id="sz1">加载中…</div></div>
+    </div>
+    <div class="card">
+      <img src="data/spytest/spy_mal_02.jpg" onerror="this.style.display='none'">
+      <div class="card-info"><div class="card-name">spy_mal_02.jpg（封面 Standard）</div><div class="card-size" id="sz2">加载中…</div></div>
+    </div>
+    <div class="card">
+      <img src="data/spytest/spy_mal_03.jpg" onerror="this.style.display='none'">
+      <div class="card-info"><div class="card-name">spy_mal_03.jpg（pictures #1）</div><div class="card-size" id="sz3">加载中…</div></div>
+    </div>
+    <div class="card">
+      <img src="data/spytest/spy_mal_04.jpg" onerror="this.style.display='none'">
+      <div class="card-info"><div class="card-name">spy_mal_04.jpg（pictures #2）</div><div class="card-size" id="sz4">加载中…</div></div>
+    </div>
+    <div class="card">
+      <img src="data/spytest/spy_mal_05.jpg" onerror="this.style.display='none'">
+      <div class="card-info"><div class="card-name">spy_mal_05.jpg（pictures #3）</div><div class="card-size" id="sz5">加载中…</div></div>
+    </div>
+    <div class="card">
+      <img src="data/spytest/spy_mal_06.jpg" onerror="this.style.display='none'">
+      <div class="card-info"><div class="card-name">spy_mal_06.jpg（pictures #4）</div><div class="card-size" id="sz6">加载中…</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- Bing -->
+<div class="section">
+  <div class="section-header">
+    <span class="badge badge-bing">来源2</span>
+    <span class="section-title">Bing 图片搜索（后备）</span>
+    <span class="section-meta">关键词: SPY FAMILY fanart / 同人图 / anime wallpaper HD</span>
+  </div>
+  <div class="grid">
+    <div class="card">
+      <img src="data/spytest/80833692e631422f843bc9224747bfbf.jpg" onerror="this.style.display='none'">
+      <div class="card-info">
+        <div class="card-name">fanart 关键词（来源: tkcdns.com）</div>
+        <div class="card-size" id="sz7">加载中…</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="data/spytest/1ae705fa41434ff3949c6dd860c8d465.jpg" onerror="this.style.display='none'">
+      <div class="card-info">
+        <div class="card-name">同人图 关键词（来源: 699pic.com）</div>
+        <div class="card-size" id="sz8">加载中…</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="data/spytest/56b5248ee6794f3db271c545fc104f03.jpg" onerror="this.style.display='none'">
+      <div class="card-info">
+        <div class="card-name">anime wallpaper HD 关键词（来源: xjishu.com）</div>
+        <div class="card-size" id="sz9">加载中…</div>
+      </div>
+    </div>
+    <div class="card">
+      <img src="data/spytest/dcd1262d3ef04d80b3eefd9dca72f0c5.jpg" onerror="this.style.display='none'">
+      <div class="card-info">
+        <div class="card-name">anime wallpaper HD 关键词（来源: douding.cn）</div>
+        <div class="card-size" id="sz10">加载中…</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 对比结论 -->
+<div class="verdict">
+  <h2>对比结论</h2>
+  <div class="verdict-row">
+    <span class="verdict-label">MAL API</span>
+    <span class="verdict-green">✅ 搜索精准（SPY×FAMILY ID=50265），图片均为官方 Key Visual / 剧照，主题100%相关</span>
+  </div>
+  <div class="verdict-row">
+    <span class="verdict-label"></span>
+    <span>⚠️ 下载速度不稳定（偶发 Read Timeout），需重试机制；图片为竖图（~420×600），适合封面不适配横版</span>
+  </div>
+  <div class="verdict-row">
+    <span class="verdict-label">Bing 搜索</span>
+    <span class="verdict-yellow">⚠️ 关键词依赖强，中文词「同人图」「动漫壁纸」容易召回到素材站/图库</span>
+  </div>
+  <div class="verdict-row">
+    <span class="verdict-label"></span>
+    <span class="verdict-red">❌ 本次 Bing 结果多来自国内素材聚合站（699pic/douding/xjishu），图片内容质量存疑，需人工确认</span>
+  </div>
+  <div class="verdict-row">
+    <span class="verdict-label">推荐策略</span>
+    <span>MAL API 为主（可指定 MAL ID 绕过关键词搜索），Bing 仅作为补充；可增加黑名单域名（699pic.com, douding.cn 等国内素材站）</span>
+  </div>
+</div>
+
+<script>
+// 显示图片实际尺寸
+['data/spytest/spy_mal_01.jpg','data/spytest/spy_mal_02.jpg','data/spytest/spy_mal_03.jpg',
+ 'data/spytest/spy_mal_04.jpg','data/spytest/spy_mal_05.jpg','data/spytest/spy_mal_06.jpg',
+ 'data/spytest/80833692e631422f843bc9224747bfbf.jpg',
+ 'data/spytest/1ae705fa41434ff3949c6dd860c8d465.jpg',
+ 'data/spytest/56b5248ee6794f3db271c545fc104f03.jpg',
+ 'data/spytest/dcd1262d3ef04d80b3eefd9dca72f0c5.jpg'].forEach((src, i) => {
+  const img = new Image();
+  img.onload = () => {
+    const el = document.getElementById('sz' + (i+1));
+    if (el) el.textContent = img.naturalWidth + ' × ' + img.naturalHeight + 'px';
+  };
+  img.src = src;
+});
+</script>
+</body>
+</html>

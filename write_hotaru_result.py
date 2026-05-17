@@ -1,0 +1,78 @@
+import sys, json
+sys.path.insert(0, r"E:\workspace\workbuddy\anime-lyrics-publisher")
+from ai_analyzer import write_result_to_file
+
+data = {
+  "song_intro": "《ホタルノヒカリ》是《火影忍者疾风传》的第六首OP，由ステレオポニー演唱！歌词以萤火虫燃尽的意象，描绘热烈又短暂的青春与爱情。旋律清透，充满夏日少女气息，每次响起都让人心头一紧。对日语学习者来说，歌词里的动词活用和助词超丰富，强推！",
+  "result": [
+    {"original": "Sha la la", "furigana": "Sha la la", "translation": "Sha la la", "grammar": "英文衬词，无语法结构，作音节填充，营造轻盈歌唱感"},
+    {"original": "いつかきっと", "furigana": "いつかきっと", "translation": "总有一天，一定", "grammar": "「いつか」：不确定时间副词，表示某天/终有一日；「きっと」：副词，表示强烈确信一定，两词连用加强语气"},
+    {"original": "僕は手にするんだ", "furigana": "僕（ぼく）は手（て）にするんだ", "translation": "我一定会得到的", "grammar": "「手にする」：惯用句，意为得到/获得；「するんだ」=「するのだ」，「のだ」表说话人的决心或强调语气"},
+    {"original": "はかなき胸にそっと", "furigana": "はかなき胸（むね）にそっと", "translation": "轻轻放在这短暂易逝的心中", "grammar": "「はかなき」：文语形容词「はかなし」的連体形（连体修饰形），修饰「胸」；「に」：格助词表方向；「そっと」：副词，轻柔地"},
+    {"original": "ひかり燃えていけ", "furigana": "ひかり燃（も）えていけ", "translation": "光芒，燃烧着前行吧", "grammar": "「燃えていけ」：「燃えていく」的命令形，「ていく」表示动作持续向前发展；命令形表达期望与鼓励"},
+    {"original": "逢いたくなるの「衝動」", "furigana": "逢（あ）いたくなるの「衝動（しょうどう）」", "translation": "想要相见的「冲动」", "grammar": "「逢いたくなる」：「逢いたい」的语干＋「くなる」，表示变得想见；「の」在此作名词化助词，将整句名词化；「衝動」为诠释性标注"},
+    {"original": "哭きたくなるの「純情」", "furigana": "哭（な）きたくなるの「純情（じゅんじょう）」", "translation": "想要哭泣的「纯情」", "grammar": "「哭き」=「泣き」，「たくなる」接动词語干，表示逐渐萌生的欲望；结构与上句平行，形成对仗"},
+    {"original": "夏の火に飛び込んだ", "furigana": "夏（なつ）の火（ひ）に飛（と）び込（こ）んだ", "translation": "飞身扑入了夏日的火焰", "grammar": "「飛び込んだ」：複合動詞「飛び込む」（跳入）的過去形；「に」：格助詞表動作目標/方向"},
+    {"original": "ホタルはかえらない", "furigana": "ホタルはかえらない", "translation": "萤火虫不再回来", "grammar": "「は」：主题助词，将ホタル提为话题；「かえらない」：「帰る」的否定形「帰らない」，表示不归返"},
+    {"original": "あなたは何も言わず", "furigana": "あなたは何（なに）も言（い）わず", "translation": "你什么也没有说", "grammar": "「何も〜ない」：全面否定，「言わず」是「言わずに」的省略，文語中「ず」是否定助动词，修饰后续动作"},
+    {"original": "接吻を残して", "furigana": "接吻（せっぷん）を残（のこ）して", "translation": "留下一个吻", "grammar": "「〜を残して」：「を」格助词表宾语；「残して」=「残す」的て形，表先行动作（留下……之后）"},
+    {"original": "火傷つくままうなづいたね", "furigana": "火傷（やけど）つくままうなづいたね", "translation": "就这样带着灼伤点头答应了呢", "grammar": "「〜まま」：表示保持某状态不变，此处「つくまま」意为就这样带着伤；「うなづいた」：「うなずく」（点头）的過去形；「ね」：終助詞，确认共鸣"},
+    {"original": "哀しいほど命揺らめいていた", "furigana": "哀（かな）しいほど命（いのち）揺（ゆ）らめいていた", "translation": "悲伤得生命都在摇曳", "grammar": "「〜ほど」：程度助词，悲伤到……的程度；「揺らめいていた」：「揺らめく」的テイタ形，表示过去持续状态"},
+    {"original": "Sha la la", "furigana": "Sha la la", "translation": "Sha la la", "grammar": "英文衬词，副歌反复段落，起音乐节奏填充作用"},
+    {"original": "いつかきっと", "furigana": "いつかきっと", "translation": "总有一天，一定", "grammar": "「いつか」时间副词+「きっと」确信副词，构成强烈的未来期许，反复出现强化主题"},
+    {"original": "僕は手にするんだ", "furigana": "僕（ぼく）は手（て）にするんだ", "translation": "我一定会得到的", "grammar": "「手にする」惯用表达；「のだ（んだ）」表达说话人的决意和强调，副歌反复句"},
+    {"original": "はかなき胸にそっと", "furigana": "はかなき胸（むね）にそっと", "translation": "轻轻放在这短暂易逝的心中", "grammar": "「はかなき」文语連体形；「に」方向助词；「そっと」温柔轻盈的副词，副歌反复句"},
+    {"original": "ひかり燃えていけ", "furigana": "ひかり燃（も）えていけ", "translation": "光芒，燃烧着前行吧", "grammar": "「燃えていけ」：「〜ていく」持续/向前发展＋命令形，表鼓励与祈愿；副歌核心句"},
+    {"original": "Sha la la", "furigana": "Sha la la", "translation": "Sha la la", "grammar": "英文衬词"},
+    {"original": "愛しきひと", "furigana": "愛（いと）しきひと", "translation": "深爱的那个人", "grammar": "「愛しき」：文語形容詞「愛しい」的連体形；「ひと」：人，整体作呼格，向爱人倾诉"},
+    {"original": "あなたもみえているの", "furigana": "あなたもみえているの", "translation": "你也看得见吗", "grammar": "「も」：并列/强调助词也；「みえている」：「見える」テイル形，表示持续可见状态；「の」：终助词，升调表疑问"},
+    {"original": "まばゆい月がそっと", "furigana": "まばゆい月（つき）がそっと", "translation": "耀眼的月光悄悄地", "grammar": "「まばゆい」：形容词耀眼的；「が」：主格助词；「そっと」：副词，轻柔地（未完成句，引出下文）"},
+    {"original": "明日を照らして", "furigana": "明日（あした）を照（て）らして", "translation": "照亮明天", "grammar": "「を」：对象宾语助词；「照らして」：「照らす」的て形，连接后续动词或作状态描述"},
+    {"original": "強く強く輝いて", "furigana": "強（つよ）く強（つよ）く輝（かがや）いて", "translation": "强烈地，强烈地闪耀吧", "grammar": "「強く」：形容词「強い」的副詞形；重复叠用加强语气；「輝いて」：「輝く」て形，用作命令/祈愿"},
+    {"original": "風に吹かれるほど", "furigana": "風（かぜ）に吹（ふ）かれるほど", "translation": "越是被风吹拂", "grammar": "「に吹かれる」：受身形，被风吹；「ほど」：程度助词，此处越……越……的前半句"},
+    {"original": "烈しくなる心に", "furigana": "烈（はげ）しくなる心（こころ）に", "translation": "越发激烈的心中", "grammar": "「〜くなる」：形容词语干+くなる，表示变化变得……；「に」：格助词，表方向/所在"},
+    {"original": "はぐれそうな想い出が", "furigana": "はぐれそうな想（おも）い出（で）が", "translation": "那些好像要散去的回忆", "grammar": "「〜そうな」：様態助動詞「そうだ」連体形，表示看起来要……；「が」：主格助词引出主语"},
+    {"original": "また優しく灯る", "furigana": "また優（やさ）しく灯（とも）る", "translation": "又温柔地亮起", "grammar": "「また」：副词又/再次；「優しく」：形容词副词形；「灯る」：动词点亮/燃起"},
+    {"original": "夢中で駆けだしたら", "furigana": "夢中（むちゅう）で駆（か）けだしたら", "translation": "如果沉迷其中奔跑起来", "grammar": "「夢中で」：「夢中」+で，表示状态如痴如醉地；「駆けだしたら」：「駆けだす」+たら，条件假设"},
+    {"original": "触れられる気がした", "furigana": "触（ふ）れられる気（き）がした", "translation": "感觉好像能触碰到", "grammar": "「〜られる」：可能形；「気がする」：惯用表达感觉/有一种……的感觉；「した」：過去形"},
+    {"original": "意志くまま手を伸ばすよ", "furigana": "意志（いし）くまま手（て）を伸（の）ばすよ", "translation": "随着心意伸出手来", "grammar": "「〜まま」：表示顺随某状态；「手を伸ばす」：惯用句，伸出手（去够）；「よ」：終助詞，语气词"},
+    {"original": "切ないほど命揺らめいていく", "furigana": "切（せつ）ないほど命（いのち）揺（ゆ）らめいていく", "translation": "悲切得生命都在颤动消逝", "grammar": "「切ない」：形容词悲切/难受；「ほど」：程度助词；「揺らめいていく」：持续进行+向前消逝的ていく形"},
+    {"original": "Sha la la", "furigana": "Sha la la", "translation": "Sha la la", "grammar": "英文衬词"},
+    {"original": "僕はずっと", "furigana": "僕（ぼく）はずっと", "translation": "我一直，永远", "grammar": "「は」：主题助词；「ずっと」：副词，表持续时间一直/始终；后续动词被引出"},
+    {"original": "唄いつづけていくよ", "furigana": "唄（うた）いつづけていくよ", "translation": "会一直唱下去的", "grammar": "「唄いつづける」：複合動詞，「つづける」接在动词連用形后，表示持续做某事；「ていく」表向未来延伸；「よ」：終助詞"},
+    {"original": "ふるえる胸にそっと", "furigana": "ふるえる胸（むね）にそっと", "translation": "轻轻放在颤抖的心中", "grammar": "「ふるえる」：「震える」連体形，修饰「胸」；「に」：方向助词；「そっと」副词"},
+    {"original": "ひかり燃えていけ", "furigana": "ひかり燃（も）えていけ", "translation": "光芒，燃烧着前行吧", "grammar": "「燃えていけ」：持续动态命令形，副歌核心句反复"},
+    {"original": "Sha la la", "furigana": "Sha la la", "translation": "Sha la la", "grammar": "英文衬词"},
+    {"original": "愛しきひと", "furigana": "愛（いと）しきひと", "translation": "深爱的那个人", "grammar": "「愛しき」文語連体形，呼格倾诉对象"},
+    {"original": "あなたに届くように", "furigana": "あなたに届（とど）くように", "translation": "为了能传达到你那里", "grammar": "「に届く」：「届く」达到/传达，「に」表方向；「ように」：目的助词，表示祈愿/目的"},
+    {"original": "はてない空にそっと", "furigana": "はてない空（そら）にそっと", "translation": "轻轻向那无尽的天空", "grammar": "「はてない」：「果てない」=「果てる」否定連体形，无尽的；「に」方向助词；「そっと」副词"},
+    {"original": "想いつのらせて", "furigana": "想（おも）いつのらせて", "translation": "让思念愈加深切", "grammar": "「つのらせる」：「募らせる」使役形，使思念积聚/加深；て形表连接状态"},
+    {"original": "強く強く響かせて", "furigana": "強（つよ）く強（つよ）く響（ひび）かせて", "translation": "强烈地，强烈地让它回响", "grammar": "「響かせる」：「響く」使役形，让……回响；て形作命令/祈愿；叠词加强"},
+    {"original": "Sha la la", "furigana": "Sha la la", "translation": "Sha la la", "grammar": "英文衬词"},
+    {"original": "いつかきっと", "furigana": "いつかきっと", "translation": "总有一天，一定", "grammar": "副歌反复句，「いつか」+「きっと」构成强烈期许"},
+    {"original": "ホタルは燃え尽き散って", "furigana": "ホタルは燃（も）え尽（つ）き散（ち）って", "translation": "萤火虫燃尽后四散飘落", "grammar": "「燃え尽き散る」：複数動詞連接，「燃え尽きる」（燃尽）+「散る」（飘散）；て形表连续动作"},
+    {"original": "きえゆく胸にそっと", "furigana": "きえゆく胸（むね）にそっと", "translation": "轻轻放在渐渐消逝的心中", "grammar": "「きえゆく」：「消えていく」的文語/诗语形，表示逐渐消失；連体形修饰「胸」"},
+    {"original": "夢よ輝いて", "furigana": "夢（ゆめ）よ輝（かがや）いて", "translation": "梦想啊，闪耀吧", "grammar": "「よ」：呼格助词（独立用法），呼唤「夢」；「輝いて」：「輝く」て形作命令，祈愿梦想闪耀"},
+    {"original": "Sha la la", "furigana": "Sha la la", "translation": "Sha la la", "grammar": "英文衬词"},
+    {"original": "愛しきひと", "furigana": "愛（いと）しきひと", "translation": "深爱的那个人", "grammar": "文語連体形呼格，副歌反复倾诉对象"},
+    {"original": "あなたも忘れないで", "furigana": "あなたも忘（わす）れないで", "translation": "你也不要忘记啊", "grammar": "「も」：并列助词；「忘れないで」：「忘れる」否定+て形，表请求/恳切「ないでください」的省略形"},
+    {"original": "きらめく夏に", "furigana": "きらめく夏（なつ）に", "translation": "在那闪烁的夏天里", "grammar": "「きらめく」：动词闪烁/闪耀，連体形修饰「夏」；「に」：格助词表时间/场合"},
+    {"original": "そっと願いを重ねて", "furigana": "そっと願（ねが）いを重（かさ）ねて", "translation": "轻轻地将愿望叠加", "grammar": "「そっと」副词；「願いを重ねる」：惯用表达寄托/积叠愿望；て形表连接/状态描述"},
+    {"original": "Sha la la", "furigana": "Sha la la", "translation": "Sha la la", "grammar": "英文衬词"},
+    {"original": "いつかきっと", "furigana": "いつかきっと", "translation": "总有一天，一定", "grammar": "「いつか」+「きっと」，副歌最终反复，主题收束"},
+    {"original": "僕は手にするんだ", "furigana": "僕（ぼく）は手（て）にするんだ", "translation": "我一定会得到的", "grammar": "「手にする」惯用句；「んだ」强调决心，全曲最终宣言"},
+    {"original": "はかなき胸にそっと", "furigana": "はかなき胸（むね）にそっと", "translation": "轻轻放在这短暂易逝的心中", "grammar": "「はかなき」文語連体形；「にそっと」轻柔方向表达，副歌核心意象反复"},
+    {"original": "ひかり燃えていけ", "furigana": "ひかり燃（も）えていけ", "translation": "光芒，燃烧着前行吧", "grammar": "「燃えていけ」命令形，全曲核心句最终收束"},
+    {"original": "Sha la la", "furigana": "Sha la la", "translation": "Sha la la", "grammar": "英文衬词"},
+    {"original": "愛しきひと", "furigana": "愛（いと）しきひと", "translation": "深爱的那个人", "grammar": "文語連体形呼格，全曲最终倾诉"},
+    {"original": "あなたもみえているの", "furigana": "あなたもみえているの", "translation": "你也看得见吗", "grammar": "「も」并列助词；「みえている」持续可见状态；「の」疑问终助词，轻声询问"},
+    {"original": "まばゆい月がそっと", "furigana": "まばゆい月（つき）がそっと", "translation": "耀眼的月光悄悄地", "grammar": "「まばゆい」耀眼的形容词；「が」主格；「そっと」轻柔副词"},
+    {"original": "明日を照らして", "furigana": "明日（あした）を照（て）らして", "translation": "照亮明天", "grammar": "「を照らす」：宾语+动词，照亮；て形连接后续"},
+    {"original": "強く強く輝いて", "furigana": "強（つよ）く強（つよ）く輝（かがや）いて", "translation": "强烈地，强烈地闪耀吧", "grammar": "「強く」形容词副词形叠用强调；「輝いて」命令/祈愿，全曲尾奏收束"}
+  ]
+}
+
+print(f"result 条数: {len(data['result'])}")
+json_str = json.dumps(data, ensure_ascii=False)
+write_result_to_file(json_str)
+print("写入完成")
